@@ -1,5 +1,5 @@
 <template>
-  <mt-header class="header-bar">
+  <mt-header fixed>
      <router-link to="/search" slot="left">
        <mt-button>{{searchTitle}}</mt-button>
      </router-link>
