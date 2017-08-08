@@ -1,5 +1,5 @@
 <template>
-  <mt-header>
+  <mt-header class="header-bar">
      <router-link to="/search" slot="left">
        <mt-button>{{searchTitle}}</mt-button>
      </router-link>
@@ -24,5 +24,9 @@ export default {
 </script>
 
 <style scoped>
-
+.header-bar {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
 </style>
