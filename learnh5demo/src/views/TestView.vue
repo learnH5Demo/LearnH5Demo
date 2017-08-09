@@ -28,7 +28,10 @@ export default {
     // 触发当前实例上的事件。附加参数都会传给监听器回调。
     handleClose: function () {
       Indicator.open('加载中...')
+      // document.getElementsByClassName 获取遮盖层 'mint-indicator-mask'
+      // 在浏览器command-shift-c可以找到这个遮盖层
       document.getElementsByClassName('mint-indicator-mask')[0].addEventListener('click', function () {
+        // 关闭加载HUD
         Indicator.close()
       })
       // console.log('点击了消息')
@@ -55,7 +58,7 @@ export default {
   height: 30px;
   margin-left: 15px;
   margin-top: 25px;
-  font-size: 20px;
+  font-size: 16px;
   text-align: left;
   color: white;
   float: left;
@@ -66,7 +69,7 @@ export default {
   margin-left: 25%;
   margin-right: 25%;
   display: inline-block;
-  font-size: 24px;
+  font-size: 20px;
   color: white;
   font-weight: bold;
 }
@@ -75,7 +78,7 @@ export default {
   height: 30px;
   margin-right: 15px;
   margin-top: 25px;
-  font-size: 20px;
+  font-size: 16px;
   text-align: right;
   float: right;
   color: white;

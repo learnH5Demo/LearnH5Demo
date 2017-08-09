@@ -4,7 +4,7 @@
 
  <div>
    <!-- :functions="fatherFuncs" -->
-   <header-bar leftBtn="返回" rightBtn="消息" headerTitle="headerTitle" @leftBtnClick="leftClick()"  @rightBtnClick="rightClick()"></header-bar>
+   <header-bar leftBtn="返回" rightBtn="消息" headerTitle="主页" @leftBtnClick="leftClick()"  @rightBtnClick="rightClick()"></header-bar>
   <!-- <router-view></router-view> -->
 </div>
  <div class="box"></div>
@@ -25,9 +25,11 @@ export default {
     // 调用子组件的方法
     leftClick: function () {
       console.log('我在父类执行了左侧按钮点击')
+      alert('我在父类执行了左侧按钮点击')
     },
     rightClick: function () {
       console.log('我在父类执行了右侧按钮点击')
+      alert('我在父类执行了右侧按钮点击')
     }
   },
   components: {
