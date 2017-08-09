@@ -13,6 +13,7 @@
 </template>
 
 <script>
+import { Indicator } from 'mint-ui'
 export default {
   props: ['leftBtn', 'headerTitle', 'rightBtn'],
   data () {
@@ -21,7 +22,10 @@ export default {
   },
   methods: {
     handleClose: function () {
-      // this.$indicator.open('加载中...')
+      Indicator.open('加载中...')
+      document.getElementsByClassName('mint-indicator-mask')[0].addEventListener('click', function () {
+        Indicator.close()
+      })
       // console.log('点击了消息')
       this.$emit('leftBtnClick')
     },
