@@ -21,6 +21,10 @@ export default {
     }
   },
   methods: {
+    // vue1.0中 vm.$dispatch 和 vm.$broadcast 被弃用，改用$emit,$on
+    // 监听当前实例上的自定义事件。事件可以由vm.$emit触发。回调函数会接收所有传入事件触发函数的额外参数。
+    // vm.$emit( event, […args] )
+    // 触发当前实例上的事件。附加参数都会传给监听器回调。
     handleClose: function () {
       // this.$indicator.open('加载中...')
       // console.log('点击了消息')

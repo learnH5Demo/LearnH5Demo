@@ -17,10 +17,12 @@ export default {
   name: 'app',
   data () {
     return {
+      // 下面这句代码是相当于把block，把方法传给子组件
       fatherFuncs: [this.leftBtnClick, this.rightBtnClick]
     }
   },
   methods: {
+    // 调用子组件的方法
     leftClick: function () {
       console.log('我在父类执行了左侧按钮点击')
     },
