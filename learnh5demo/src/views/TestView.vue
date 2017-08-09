@@ -17,6 +17,7 @@ export default {
   props: ['leftBtn', 'headerTitle', 'rightBtn'],
   data () {
     return {
+
     }
   },
   methods: {
@@ -40,7 +41,7 @@ export default {
   background-color: rgb(68, 143, 255);
 }
 .leftBtn {
-  width: 50px;
+  width: auto;
   height: 30px;
   margin-left: 15px;
   margin-top: 25px;
@@ -60,7 +61,7 @@ export default {
   font-weight: bold;
 }
 .rightBtn {
-  width: 50px;
+  width: auto;
   height: 30px;
   margin-right: 15px;
   margin-top: 25px;
