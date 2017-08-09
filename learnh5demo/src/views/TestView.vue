@@ -1,18 +1,14 @@
 <template>
   <div class="header-bar">
-  <!-- <mt-header class="header" title="固定在顶部">
-   <router-link to="/" slot="left">
-   <mt-button icon="back"></mt-button>
- </router-link>
-  <mt-button icon="more" slot="right"></mt-button>
- </mt-header> -->
-
-<!-- <div class="leftBtn"> -->
-  <!-- <img class="leftBtnImg" src="../assets/logo.png" /> -->
-  <!-- 返回
-</div> -->
-<p class="leftBtn" @click="handleClose"><span class="leftBtnColor">返回</span></p>
-
+<div class="leftBtn" @click="handleClose">
+  消息
+</div>
+<div class="header-title">
+  主页
+</div>
+<div class="rightBtn" @click="handleCloseR">
+  更多
+</div>
 </div>
 </template>
 
@@ -37,28 +33,37 @@ export default {
   top: 0px;
   width: 100%;
   height: 64px;
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(68, 143, 255);
 }
-/*.default1 {
-  width: 100%;
-}
-.primary1 {
-  top: 10px;
-  width: 50%;
-}
-.danger1 {
-  top: 20px;
-}*/
 .leftBtn {
-  /*background-color: yellow;*/
-  width: 40px;
+  width: 50px;
   height: 30px;
   margin-left: 15px;
-  margin-top: 20px;
+  margin-top: 25px;
   font-size: 20px;
-  text-align: center;
+  text-align: left;
+  color: white;
+  float: left;
+  display: inline-block;
 }
-.leftBtnColor {
-  color: #1fb288;
+.header-title {
+  margin-top: 20px;
+  margin-left: 25%;
+  margin-right: 25%;
+  display: inline-block;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+.rightBtn {
+  width: 50px;
+  height: 30px;
+  margin-right: 15px;
+  margin-top: 25px;
+  font-size: 20px;
+  text-align: right;
+  float: right;
+  color: white;
+  display: inline-block;
 }
 </style>
