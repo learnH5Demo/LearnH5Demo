@@ -3,7 +3,7 @@
 <div class="leftBtn" @click="handleClose">
   {{leftBtn}}
 </div>
-<div class="header-title">
+<div class="header-title" @click="clickTitle">
   {{headerTitle}}
 </div>
 <div class="rightBtn" @click="handleCloseR">
@@ -15,10 +15,10 @@
 <script>
 import { Indicator } from 'mint-ui'
 export default {
-  props: ['leftBtn', 'headerTitle', 'rightBtn'],
+  props: ['leftBtn', 'headerTitle', 'rightBtn', 'titleFunctions'],
   data () {
     return {
-
+      flag: 0
     }
   },
   methods: {
@@ -37,6 +37,10 @@ export default {
     handleCloseR: function () {
       // console.log('点击了更多')
       this.$emit('rightBtnClick')
+    },
+    clickTitle: function () {
+      this.titleFunctions[this.flag]()
+      this.flag = this.flag === 0 ? 1 : 0
     }
   }
 }

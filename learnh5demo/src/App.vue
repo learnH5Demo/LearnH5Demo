@@ -4,7 +4,7 @@
 
  <div>
    <!-- :functions="fatherFuncs" -->
-   <header-bar leftBtn="返回" rightBtn="消息" headerTitle="headerTitle" @leftBtnClick="leftClick()"  @rightBtnClick="rightClick()"></header-bar>
+   <header-bar leftBtn="返回" rightBtn="消息" headerTitle="headerTitle" :titleFunctions="fatherFuncs" @leftBtnClick="leftClick()"  @rightBtnClick="rightClick()"></header-bar>
   <!-- <router-view></router-view> -->
 </div>
  <div class="box"></div>
@@ -13,12 +13,13 @@
 
 <script>
 import TestView from './views/TestView.vue'
+import { Toast } from 'mint-ui'
 export default {
   name: 'app',
   data () {
     return {
       // 下面这句代码是相当于把block，把方法传给子组件
-      fatherFuncs: [this.leftBtnClick, this.rightBtnClick]
+      fatherFuncs: [this.fatherFuncs1, this.fatherFuncs2]
     }
   },
   methods: {
@@ -28,6 +29,12 @@ export default {
     },
     rightClick: function () {
       console.log('我在父类执行了右侧按钮点击')
+    },
+    fatherFuncs1: function () {
+      Toast('啪啪啪')
+    },
+    fatherFuncs2: function () {
+      Toast('哈哈哈')
     }
   },
   components: {
