@@ -23,10 +23,12 @@ export default {
   methods: {
     handleClose: function () {
       // this.$indicator.open('加载中...')
-      console.log('点击了消息')
+      // console.log('点击了消息')
+      this.$emit('leftBtnClick')
     },
     handleCloseR: function () {
-      console.log('点击了更多')
+      // console.log('点击了更多')
+      this.$emit('rightBtnClick')
     }
   }
 }
