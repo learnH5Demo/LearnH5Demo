@@ -21,32 +21,37 @@
   </script>
 
   <!-- 引入样式 -->
-  <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css"> -->
   <style>
-  body {
-    margin: 0px;
-  }
+    body {
+      margin: 0px;
+    }
   </style>
 </head>
 
 <body>
   <div id="app">
-    <mt-button @click.native="handleClick">按钮</mt-button>
+
   </div>
   <!-- built files will be auto injected -->
 </body>
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
-<!-- 引入组件库 -->
-<script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+
 <script>
-  new Vue({
-    el: '#app',
-    methods: {
-      handleClick: function() {
-        this.$toast('hello world!')
-      }
-    }
-  })
+window.onload = function () {
+document.addEventListener('touchstart', function (event) {
+  if (event.touches.length > 1) {
+    event.preventDefault();
+  }
+})
+var lastTouchEnd = 0;
+document.addEventListener('touchend', function (event) {
+  var now = (new Date()).getTime();
+  if (now - lastTouchEnd <= 300) {
+    event.preventDefault();
+  }
+  lastTouchEnd = now;
+}, false)
+}
 </script>
 
 </html>

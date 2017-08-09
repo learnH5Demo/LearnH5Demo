@@ -1,9 +1,7 @@
 <template>
   <div id="app">
   <!-- <mt-header>固定在顶部</mt-header> -->
- <router-link to="/home">主页</router-link>
- <router-link to="/news">新闻</router-link>
- <mt-button @click.native="handleClick">按钮</mt-button>
+
  <div>
   <router-view></router-view>
 </div>
@@ -16,9 +14,7 @@ import TestView from './views/TestView.vue'
 export default {
   name: 'app',
   methods: {
-    handleClick: function () {
-      this.$indicator.open('加载中...')
-    }
+
   },
   components: {
     TestView
