@@ -3,7 +3,8 @@
   <!-- <mt-header>固定在顶部</mt-header> -->
 
  <div>
-   <header-bar leftBtn="返回" rightBtn="高兴就好" headerTitle="headerTitle"></header-bar>
+   <!-- :functions="fatherFuncs" -->
+   <header-bar leftBtn="返回" rightBtn="消息" headerTitle="headerTitle" @leftBtnClick="leftClick()"  @rightBtnClick="rightClick()"></header-bar>
   <!-- <router-view></router-view> -->
 </div>
  <div class="box"></div>
@@ -14,8 +15,18 @@
 import TestView from './views/TestView.vue'
 export default {
   name: 'app',
+  data () {
+    return {
+      fatherFuncs: [this.leftBtnClick, this.rightBtnClick]
+    }
+  },
   methods: {
-
+    leftClick: function () {
+      console.log('我在父类执行了左侧按钮点击')
+    },
+    rightClick: function () {
+      console.log('我在父类执行了右侧按钮点击')
+    }
   },
   components: {
     'header-bar': TestView
