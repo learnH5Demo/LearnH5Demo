@@ -21,7 +21,10 @@ export default {
   methods: {
     handleClose: function () {
       // this.$indicator.open('加载中...')
-      console.log('点击了leftBtn')
+      console.log('点击了消息')
+    },
+    handleCloseR: function () {
+      console.log('点击了更多')
     }
   }
 }
