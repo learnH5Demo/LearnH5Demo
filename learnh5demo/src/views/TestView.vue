@@ -1,19 +1,20 @@
 <template>
   <div class="header-bar">
 <div class="leftBtn" @click="handleClose">
-  消息
+  {{leftBtn}}
 </div>
 <div class="header-title">
-  主页
+  {{headerTitle}}
 </div>
 <div class="rightBtn" @click="handleCloseR">
-  更多
+  {{rightBtn}}
 </div>
 </div>
 </template>
 
 <script>
 export default {
+  props: ['leftBtn', 'headerTitle', 'rightBtn'],
   data () {
     return {
     }

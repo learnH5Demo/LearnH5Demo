@@ -3,7 +3,8 @@
   <!-- <mt-header>固定在顶部</mt-header> -->
 
  <div>
-  <router-view></router-view>
+   <header-bar leftBtn="返回" rightBtn="高兴就好" headerTitle="headerTitle"></header-bar>
+  <!-- <router-view></router-view> -->
 </div>
  <div class="box"></div>
  </div>
@@ -17,7 +18,7 @@ export default {
 
   },
   components: {
-    TestView
+    'header-bar': TestView
   }
 }
 </script>
