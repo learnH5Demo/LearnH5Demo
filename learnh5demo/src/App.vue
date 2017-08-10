@@ -1,18 +1,16 @@
 <template>
   <div id="app">
   <!-- <mt-header>固定在顶部</mt-header> -->
-
- <div>
+    <div>
    <!-- :functions="fatherFuncs" -->
-   <header-bar leftBtn="返回" rightBtn="消息" headerTitle="主页" :titleFunctions="fatherFuncs" @leftBtnClick="leftClick()"  @rightBtnClick="rightClick()"></header-bar>
+     <header-bar leftBtn="返回" rightBtn="消息" headerTitle="主页" :titleFunctions="fatherFuncs" @leftBtnClick="leftClick()"  @rightBtnClick="rightClick()"></header-bar>
   <!-- <router-view></router-view> -->
-</div>
- <div class="box"></div>
+    </div>
  </div>
 </template>
 
 <script>
-import TestView from './views/TestView.vue'
+import HeaderNav from './views/HeaderNav.vue'
 import { Toast } from 'mint-ui'
 export default {
   name: 'app',
@@ -40,7 +38,7 @@ export default {
     }
   },
   components: {
-    'header-bar': TestView
+    'header-bar': HeaderNav
   }
 }
 </script>

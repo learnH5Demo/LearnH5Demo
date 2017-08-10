@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import TestView from '@/views/TestView'
+import HeaderNav from '@/views/HeaderNav'
 
 Vue.use(Router)
 
@@ -8,8 +8,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'TestView',
-      component: TestView
+      name: 'Index',
+      component: HeaderNav
+    },
+    {
+      path: '/HeaderNav',
+      name: 'HeaderNav',
+      component: HeaderNav
     }
   ]
 })

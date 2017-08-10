@@ -1,15 +1,15 @@
 <template>
   <div class="header-bar">
-<div class="leftBtn" @click="handleClose">
-  {{leftBtn}}
-</div>
-<div class="header-title" @click="clickTitle">
-  {{headerTitle}}
-</div>
-<div class="rightBtn" @click="handleCloseR">
-  {{rightBtn}}
-</div>
-</div>
+    <div class="leftBtn" @click="handleClose">
+      {{leftBtn}}
+    </div>
+    <div class="header-title" @click="clickTitle">
+      {{headerTitle}}
+    </div>
+    <div class="rightBtn" @click="handleCloseR">
+      {{rightBtn}}
+    </div>
+  </div>
 </template>
 
 <script>
