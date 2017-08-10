@@ -6,18 +6,24 @@
      <header-bar leftBtn="返回" rightBtn="消息" headerTitle="主页" :titleFunctions="fatherFuncs" @leftBtnClick="leftClick()"  @rightBtnClick="rightClick()"></header-bar>
   <!-- <router-view></router-view> -->
     </div>
+
+    <div>
+      <footer-bar :itemArray="itemArrays"></footer-bar>
+    </div>
  </div>
 </template>
 
 <script>
 import HeaderNav from './views/HeaderNav.vue'
+import FooterBar from './views/FooterBar.vue'
 import { Toast } from 'mint-ui'
 export default {
   name: 'app',
   data () {
     return {
       // 下面这句代码是相当于把block，把方法传给子组件
-      fatherFuncs: [this.fatherFuncs1, this.fatherFuncs2]
+      fatherFuncs: [this.fatherFuncs1, this.fatherFuncs2],
+      itemArrays: ['itemOne', 'itemTwo', 'itemThree', 'itemFour', 'itemFive']
     }
   },
   methods: {
@@ -38,7 +44,8 @@ export default {
     }
   },
   components: {
-    'header-bar': HeaderNav
+    'header-bar': HeaderNav,
+    'footer-bar': FooterBar
   }
 }
 </script>
