@@ -1,7 +1,8 @@
 <template>
   <div class="item-bar">
     <div class="itemBtn" v-for="value in itemArr">
-      {{value}}
+      <!-- {{value}} -->
+      {{value.a}}
     </div>
   </div>
 </template>
@@ -17,9 +18,9 @@ export default {
   methods: {
 
   },
+  // 这个组件在加载时会走这个方法
   mounted: function () {
-    console.log('ddssds')
-    this.itemArr = this.itemArrays
+    this.itemArr = this.itemArray
   }
 }
 </script>
@@ -36,7 +37,7 @@ export default {
   border:0px solid black;
 }
 .itemBtn {
-  background-color: red;
+  /*background-color: red;*/
   flex: 1;
 }
 </style>

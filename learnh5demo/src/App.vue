@@ -23,7 +23,8 @@ export default {
     return {
       // 下面这句代码是相当于把block，把方法传给子组件
       fatherFuncs: [this.fatherFuncs1, this.fatherFuncs2],
-      itemArrays: ['itemOne', 'itemTwo', 'itemThree', 'itemFour', 'itemFive']
+      // itemArrays: ['itemOne', 'itemTwo', 'itemThree', 'itemFour']
+      itemArrays: [{ a: '首页' }, { a: '活动' }, { a: '我的' }]
     }
   },
   methods: {
